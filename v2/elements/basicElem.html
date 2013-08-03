@@ -1,0 +1,22 @@
+<polymer-element name="basic-elem">
+  <template>
+  	<input type="text" placeholder="What's your name ?" value="{{name}}"></input>
+  	<br/>
+    <span>Your name is {{name}}</span>
+    <br/>
+    <button on-click="btnClicked" >click me</button>
+    <div on-mouseover="divHover" >hoverMe!</button>
+  </template>
+  <script>
+  	Polymer('basic-elem',{
+  		name:'nico',
+  		btnClicked : function(){
+  			console.log('btnClicked');
+  		},
+  		divHover:function(){
+  			console.log('mouseHover');
+  		}
+  	});
+  	
+  </script>
+</polymer-element>

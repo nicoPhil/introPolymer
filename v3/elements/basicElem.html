@@ -1,0 +1,26 @@
+<polymer-element name="basic-elem">
+  <template>
+  	<input type="text" placeholder="What's your name ?" value="{{name}}"></input>
+    <input type="text" placeholder="What's your age ?" value="{{age}}"></input>
+  	<br/>
+    <span>Your name is {{name}}</span>
+    <br/>
+
+  </template>
+  <script>
+  	Polymer('basic-elem',{
+  		name:'nico',
+      age:'32',
+      ready:function(){
+        console.log('basic-elem rocks !')
+      },
+      nameChanged:function(){
+        console.log('nameChanged');
+      },
+      ageChanged:function(){
+        console.log('ageChanged');
+      }
+  	});
+  	
+  </script>
+</polymer-element>

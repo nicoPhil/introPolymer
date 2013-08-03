@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="../lib/polymer.min.js" type="text/javascript" ></script>
+		<link rel="import" href="elements/basicElem.html">
+	</head>
+	<body>
+		<script type="text/javascript">
+		</script>
+
+		<basic-elem id="myElem" name="bob" color="red" ageaaa="handler"></basic-elem>
+
+<span id="stateSpan"></span>
+
+		<script type="text/javascript">
+			(function displayName(){
+				var name=document.querySelector("#myElem").getAttribute("name");
+				document.querySelector("#stateSpan").innerHTML ='name is ' + name;
+				setTimeout(displayName,500);
+			})();
+		</script>
+
+	</body>
+<html>
